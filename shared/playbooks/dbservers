@@ -1,0 +1,2 @@
+[dbservers]
+dbserver ansible_host=172.28.128.16 ansible_user=root

@@ -1,0 +1,2 @@
+[loadbalancers]
+loadbalancer ansible_host=172.28.128.13 ansible_user=root
