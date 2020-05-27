@@ -14,8 +14,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       app.vm.hostname = "load-balancer"
       app.vm.provision "shell", path: "config.sh"
       config.vm.provider "virtualbox" do |v|
-        v.memory = 512
-        v.cpus = 1
+        v.memory = 1024
+        v.cpus = 2
       end
     end
 
@@ -26,8 +26,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       app.vm.hostname = "webserver-one"
       app.vm.provision "shell", path: "config.sh"
       config.vm.provider "virtualbox" do |v |
-        v.memory = 512
-        v.cpus = 1
+        v.memory = 1024
+        v.cpus = 2
       end
     end
 
@@ -38,8 +38,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       app.vm.hostname = "webserver-two"
       app.vm.provision "shell", path: "config.sh"
       config.vm.provider "virtualbox" do |v|
-        v.memory = 512
-        v.cpus = 1
+        v.memory = 1024
+        v.cpus = 2
       end
     end
 
@@ -50,8 +50,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       app.vm.hostname = "dbserver"
       app.vm.provision "shell", path: "config.sh"
       config.vm.provider "virtualbox" do |v|
-        v.memory = 512
-        v.cpus = 1
+        v.memory = 1024
+        v.cpus = 2
       end
     end
 # controlador
@@ -61,8 +61,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       app.vm.hostname = "controller"
       app.vm.provision "shell", path: "config.sh"
       config.vm.provider "virtualbox" do |v|
-        v.memory = 512
-        v.cpus = 1
+        v.memory = 1024
+        v.cpus = 2
       end 
     end
 
