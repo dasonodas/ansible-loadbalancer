@@ -5,7 +5,8 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #carpeta compartida
-  config.vm.synced_folder "shared", "/home/vagrant/shared", owner: "vagrant", group: "vagrant", create: true 
+  config.vm.synced_folder "shared", "/home/vagrant/shared", owner: "vagrant", group: "vagrant", create: true
+  config.vm.synced_folder "wordpress", "/var/www/html/wordpress", owner: "www-data", group: "www-data", create: false
 
   # balanceador de carga
     config.vm.define "load-balancer" do |app|
