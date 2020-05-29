@@ -4,4 +4,6 @@
   roles:
     - role: apache
     - role: php
-    - role: wordpress
+#    - role: wordpress
+
+# el role de wordpress pasa a ser ejecutado contra el controller

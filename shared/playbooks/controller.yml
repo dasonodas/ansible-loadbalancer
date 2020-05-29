@@ -1,0 +1,5 @@
+---
+- name: Controller Playbook
+  hosts: controllers
+  roles:
+    - role: wordpress
