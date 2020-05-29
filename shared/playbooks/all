@@ -1,0 +1,5 @@
+[all]
+load-balancer ansible_host=172.28.128.13 ansible_user=root
+webserver-one ansible_host=172.28.128.14 ansible_user=root
+webserver-two ansible_host=172.28.128.15 ansible_user=root
+db-server ansible_host=172.28.128.16 ansible_user=root
