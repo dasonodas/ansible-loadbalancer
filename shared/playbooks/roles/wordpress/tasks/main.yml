@@ -11,8 +11,14 @@
   get_url: url="{{ wp_url }}" dest="{{ wp_download_path }}" owner="www-data"
   when: wp_zipped.stat.exists == False
 
+- name: Check if Wordpress has been previously extracted
+  stat: path="{{ wp_webserver_path }}/wordpress/index.php"
+  register: wp_zipped2
+# añadimos comprobacion de descompresion previa
+
 - name: Unzip Wordpress
   unarchive: src="{{ wp_download_path }}" dest="{{ wp_webserver_path }}" copy=no owner="www-data"
+  when: wp_zipped2.stat.exists == False
   # copy=no para que busque el archivo en la máquina remota y no en el controller
 
 - name: Copy wp-config.php

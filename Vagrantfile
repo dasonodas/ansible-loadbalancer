@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       app.vm.box = "bento/ubuntu-18.04"
       app.vm.network "private_network", ip: "172.28.128.13"
       app.vm.hostname = "load-balancer"
-      app.vm.provision "shell", path: "config.sh"
+      app.vm.provision "shell", path: "config_nodes.sh"
       config.vm.provider "virtualbox" do |v|
         v.memory = 1024
         v.cpus = 2
@@ -25,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       app.vm.box = "bento/ubuntu-18.04"
       app.vm.network "private_network", ip: "172.28.128.14"
       app.vm.hostname = "webserver-one"
-      app.vm.provision "shell", path: "config.sh"
+      app.vm.provision "shell", path: "config_nodes.sh"
       config.vm.provider "virtualbox" do |v |
         v.memory = 1024
         v.cpus = 2
@@ -37,7 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       app.vm.box = "bento/ubuntu-18.04"
       app.vm.network "private_network", ip: "172.28.128.15"
       app.vm.hostname = "webserver-two"
-      app.vm.provision "shell", path: "config.sh"
+      app.vm.provision "shell", path: "config_nodes.sh"
       config.vm.provider "virtualbox" do |v|
         v.memory = 1024
         v.cpus = 2
@@ -49,7 +49,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       app.vm.box = "bento/ubuntu-18.04"
       app.vm.network "private_network", ip: "172.28.128.16"
       app.vm.hostname = "dbserver"
-      app.vm.provision "shell", path: "config.sh"
+      app.vm.provision "shell", path: "config_nodes.sh"
       config.vm.provider "virtualbox" do |v|
         v.memory = 1024
         v.cpus = 2
@@ -60,7 +60,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       app.vm.box = "bento/ubuntu-18.04"
       app.vm.network "private_network", ip: "172.28.128.17"
       app.vm.hostname = "controller"
-      app.vm.provision "shell", path: "config.sh"
+      app.vm.provision "shell", path: "config_controller.sh"
       config.vm.provider "virtualbox" do |v|
         v.memory = 1024
         v.cpus = 2
